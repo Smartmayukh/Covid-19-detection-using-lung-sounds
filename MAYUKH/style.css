@@ -1,0 +1,13 @@
+html, body {
+  margin: 1;
+  padding: 1;
+}
+#share {
+  position: fixed;
+  display:inline-block;
+  bottom:0px;
+  background:white;
+}
+canvas{
+	display:block;
+}

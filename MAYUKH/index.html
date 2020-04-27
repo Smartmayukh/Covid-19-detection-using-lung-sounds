@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="en"><head>
+  <title>Covid-19 detection by Lung sound - Mayukhmali Das</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="title" content="Covid-19 detection by Lung sound">  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+  <script src="https://unpkg.com/ml5@0.5.0/dist/ml5.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+
+<div class="container-sm">
+
+
+
+<br/>
+
+<div class="jumbotron bg-warning">
+<h1><span class="text-black"><strong>  Covid-19</strong> detection by Lung sound - Mayukhmali Das</span></h1>
+</div>
+<div class="alert alert-danger">
+
+  <strong>How to use this ?</strong> Use stethoscope-microphone for auscultating your lung. Sometimes microphone may work but will give only approximate results.
+</div>
+
+
+  
+  
+<div class="card">
+  <div class="card-header"><div class="spinner-border text-danger"></div> Hearing the sound of your lung.........</div>
+  <div class="card-body">
+   
+  
+
+   
+   
+   Coarse Crackles  : <span id="2"></span>
+   <div class="progress">
+   <div class="progress-bar bg-success" id="2bar" style="width:0%"></div>
+   </div> 
+   <br/> 
+   
+   
+  Fine Crackles : <span id="3"></span>
+   <div class="progress">
+   <div class="progress-bar bg-info" id="3bar" style="width:0%"></div>
+   </div> 
+   <br/> 
+
+   
+   Rhonchi : <span id="4"></span>
+    <div class="progress">
+   <div class="progress-bar bg-warning" id="4bar" style="width:0%"></div>
+   </div> 
+   <br/> 
+   
+    Vesicular Normal : <span id="7"></span>
+    <div class="progress">
+   <div class="progress-bar bg-dark" id="7bar" style="width:0%"></div>
+   </div> 
+   <br/>      
+
+  Wheezing  : <span id="5"></span>
+   <div class="progress">
+   <div class="progress-bar bg-danger" id="5bar" style="width:0%"></div>
+   </div> 
+   <br/> 
+
+
+  Stridor : <span id="6"></span>
+   <div class="progress">
+   <div class="progress-bar bg-secondary" id="6bar" style="width:0%"></div>
+   </div> 
+   <br/> 
+   Bronchial Breats <span id="1"></span> 
+   <div class="progress">
+   <div class="progress-bar" id="1bar" style="width:0%"></div>
+   </div> 
+   <br/> 
+  
+  <div class="card-footer"><strong>Nearest type:</stong> <span id="res"></span></div>
+</div>
+<br/>
+<div class="card">
+  <div class="card-header bg-primary text-light"> 
+  <div class="spinner-border text-primary" role="status">
+</div> 
+  <div class="card-body">  
+  <div class="alert alert-warning">
+</div>
+  <div id="chart_div" style="min-width: 400px; min-height: 120px;"></div>
+  
+  <br/>
+  
+</div>
+
+ 
+  
+  </div>
+</div>
+
+ <br/> 
+ 
+<div class="row justify-content-center">
+</div>
+
+<script src="sketch.js"></script>
+</body></html>
